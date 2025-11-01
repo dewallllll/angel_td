@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"crc_show_message",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"crc_show_message",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

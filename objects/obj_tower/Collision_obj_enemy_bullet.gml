@@ -1,0 +1,1 @@
+global.cur_tower_hp -= global.enemy_shoot_dmg

@@ -1,0 +1,1 @@
+hp -= global.crit_dmg_mod * global.dmg

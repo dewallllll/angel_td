@@ -1,0 +1,1 @@
+draw_text(32,32,string(global.cur_tower_hp) + "/" + string(global.max_tower_hp));
