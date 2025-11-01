@@ -1,3 +1,4 @@
+
 alarm[0] = room_speed * 3;
 global.can_take_damage = true;
 global.damage_cooldown = 0;
@@ -6,8 +7,8 @@ global.gold_mod = 1
 global.xp = 0
 global.xp_mod = 1
 global.cur_tower_hp = 10
-global.max_tower_hp = 10
-global.dmg = 5
+global.max_tower_hp = 100000
+global.dmg = 1
 global.crit_mod = 0.01
 global.crit_dmg_mod = 2
 global.attack_speed = 1
@@ -22,7 +23,7 @@ global.shot_count = 0
 global.multishot_count = 0
 global.attack_radius = 300
 global.bounce_shot_chance = 1
-global.bounce_shot_damage = 0.5
+global.bounce_shot_count = 3
 pause = false
 can_heal = true
 heal_cooldown = 0

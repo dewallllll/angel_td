@@ -2,10 +2,12 @@
 bounce_chance = 0; // Значение по умолчанию
 // Флаг для определения мультишот пуль
 is_multishot = false;
-
+hit_enemies = []
+damage_cooldown = 0;
+damage_cooldown_max = 10;
 // Находим ближайшего врага
 target = instance_nearest(x, y, obj_enemy_parent);
-
+can_damage = true;
 // Если враг найден, рассчитываем направление и задаем скорость
 if (instance_exists(target))
 {

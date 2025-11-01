@@ -30,7 +30,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"Sprite3_1",
     "path":"sprites/Sprite3_1/Sprite3_1.yy",

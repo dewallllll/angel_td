@@ -2,7 +2,7 @@
 bounce_chance = 0; // Значение по умолчанию
 // Флаг для определения мультишот пуль
 is_multishot = false;
-
+hit_enemies = []
 // Находим ближайшего врага
 target = instance_nearest(x, y, obj_enemy);
 

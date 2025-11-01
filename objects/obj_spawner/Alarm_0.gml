@@ -105,10 +105,8 @@ if (instance_exists(obj_tower)) {
         }
         
         // Создаем врага
-        with (instance_create_layer(_xx, _yy, "Instances", _enemyType)) { 
-            
-        };
-    }
+        instance_create_layer(_xx, _yy, "Instances", _enemyType)
+	}
 }
 
 // Перезапускаем alarm для следующего спавна

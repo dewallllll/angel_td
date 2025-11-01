@@ -31,8 +31,8 @@ if (instance_exists(_enemy_in_range)) {
         
         // Настраиваем пулю через with
         with (new_bullet) {
-            image_xscale = 0.3;
-            image_yscale = 0.3;
+            image_xscale = 1;
+            image_yscale = 1;
             bounce_chance = global.bounce_shot_chance
             // Убедимся, что это не мультишот пуля
             is_multishot = false;

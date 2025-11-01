@@ -10,6 +10,13 @@ if lifetime<=0 {
 	instance_destroy()
 }
 
-if (place_meeting(x,y,obj_enemy_parent)) {
-	instance_destroy()
+
+
+
+// Уменьшаем кулдаун урона каждый кадр
+if (damage_cooldown > 0) {
+    damage_cooldown--;
+}
+else {
+    can_damage = true; // Разрешаем нанесение урона, когда кулдаун истек
 }
