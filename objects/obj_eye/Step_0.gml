@@ -1,35 +1,16 @@
 // Находим ближайшую цель
-var nearest = instance_nearest(x, y, obj_enemy);
+var nearest = instance_nearest(x, y, obj_enemy_parent);
 
 if (instance_exists(nearest)) {
-	speed = 0.5;
-    // Вычисляем направление к цели
-    var dir_x = nearest.x - x;
-    var dir_y = nearest.y - y;
-    var dist = point_distance(x, y, nearest.x, nearest.y);
+    // Вычисляем идеальную позицию на границе радиуса
+    var target_angle = point_direction(center_x, center_y, nearest.x, nearest.y);
+    var target_x = center_x + lengthdir_x(radius, target_angle);
+    var target_y = center_y + lengthdir_y(radius, target_angle);
     
-    // Нормализуем направление
-    if (dist > 0) {
-        dir_x /= dist;
-        dir_y /= dist;
-    }
-    
-    // Обновляем позицию с ограничением радиуса
-    var new_x = x + dir_x * speed;
-    var new_y = y + dir_y * speed;
-    
-    // Проверяем, не выходит ли новая позиция за радиус
-    var dist_to_center = point_distance(center_x, center_y, new_x, new_y);
-    if (dist_to_center <= radius) {
-        xx = new_x;
-        yy = new_y;
-    } else {
-        // Ограничиваем позицию границей радиуса
-        var angle = point_direction(center_x, center_y, new_x, new_y);
-        x = center_x + lengthdir_x(radius, angle);
-        y = center_y + lengthdir_y(radius, angle);
-    }
-}
-if (!instance_exists(nearest)) {
-	speed = 0;
+    // Плавно интерполируем к целевой позиции
+    var smooth_speed = 0.1; // Скорость интерполяции (0-1)
+    x = lerp(x, target_x, smooth_speed);
+    y = lerp(y, target_y, smooth_speed);
+} else {
+    speed = 0;
 }
