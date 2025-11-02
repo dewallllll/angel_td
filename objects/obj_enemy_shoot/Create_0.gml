@@ -1,5 +1,5 @@
-image_xscale = 0.6; 
-image_yscale = 0.6; 
+image_xscale = 1; 
+image_yscale = 1; 
 scale = 1.0
 hp = 6 * global.difficult_manager
 move_speed = 1

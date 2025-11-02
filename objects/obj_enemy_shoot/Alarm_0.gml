@@ -1,5 +1,5 @@
 // Проверяем, существует ли враг
-if (instance_exists(obj_enemy)) {
+if (instance_exists(obj_tower)) {
     // Создаем пули с разбросом по кругу   
     var _bulletType = obj_enemy_bullet;
 
@@ -8,8 +8,8 @@ if (instance_exists(obj_enemy)) {
         
         // Настраиваем пулю через with
         with (new_bullet) {
-            image_xscale = 0.3;
-            image_yscale = 0.3;         
+            image_xscale = 0.5;
+            image_yscale = 0.5;         
         }
     }
     

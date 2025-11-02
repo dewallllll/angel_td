@@ -4,7 +4,7 @@ bounce_chance = 0; // Значение по умолчанию
 is_multishot = false;
 hit_enemies = []
 damage_cooldown = 0;
-damage_cooldown_max = 10;
+damage_cooldown_max = 0;
 // Находим ближайшего врага
 target = instance_nearest(x, y, obj_enemy_parent);
 can_damage = true;
