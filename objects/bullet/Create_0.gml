@@ -7,6 +7,7 @@ damage_cooldown = 0;
 damage_cooldown_max = 0;
 // Находим ближайшего врага
 target = instance_nearest(x, y, obj_enemy_parent);
+global.cur_target = target
 can_damage = true;
 // Если враг найден, рассчитываем направление и задаем скорость
 if (instance_exists(target))
@@ -70,6 +71,7 @@ if (!is_multishot && global.multishot_count > 0)
     }
     
     // Теперь создаем мультишот пули для каждой дополнительной цели
+	if (random(1)<global.multishot_chance) {
     for (var i = 1; i < array_length(selected_targets); i++) 
     {
         // Определяем тип мультишот пули (обычная или крит)
@@ -101,10 +103,10 @@ if (!is_multishot && global.multishot_count > 0)
             }
             
             // Уменьшаем размер для визуального отличия
-            image_xscale = 0.25;
-            image_yscale = 0.25;
+            image_xscale = 1;
+            image_yscale = 1;
         }
     }
 }
-
+}
 lifetime = 10;

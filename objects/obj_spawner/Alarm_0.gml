@@ -1,3 +1,4 @@
+if global.pause == false {
 // Проверяем, существует ли игрок
 if (instance_exists(obj_tower)) {
     // Создаем global.difficult_level врагов
@@ -124,5 +125,7 @@ if (instance_exists(obj_tower)) {
     }
 }
 
+
+}
 // Перезапускаем alarm для следующего спавна
 alarm[0] = room_speed * 2;

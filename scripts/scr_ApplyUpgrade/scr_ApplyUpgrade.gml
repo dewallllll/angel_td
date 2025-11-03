@@ -45,13 +45,20 @@ function scr_ApplyUpgrade(item) {
                 global.hp_regen *= 1.3;
                 break;
 			case "Броня":
-                global.tower_armor += 1;
+				if  global.hp_regen == 0 {
+					global.hp_regen += 1;
+					break;
+				}
+                global.tower_armor *= 1.3;
                 break;
 			case "Процент брони":
                 global.tower_armor_percent += 0.01;
                 break;
 			case "Шипы":
                 global.tower_thorns_damage += 0.01;
+                break;
+			case "Вампиризм":
+                global.life_stealing += 0.01;
                 break;
 			case "Золото с врага":
                 global.gold_mod += 0.01;

@@ -110,6 +110,7 @@ switch (currentMenu) {
                     case "Реген": _currentValue = global.hp_regen; break;
                     case "Броня": _currentValue = global.tower_armor; break;
                     case "Процент брони": _currentValue = global.tower_armor_percent; break;
+					case "Вампиризм": _currentValue = global.life_stealing; break;
                     default: _currentValue = 0; break;
                 }
                 draw_text(_elementX + itemWidth / 2, _elementY + 35, "Тек: " + string(_currentValue));

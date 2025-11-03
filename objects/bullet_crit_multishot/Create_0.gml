@@ -7,7 +7,7 @@ is_multishot = true;
 var nearest_enemy = noone;
 var shortest_distance = 1000000;
 
-with (obj_enemy) 
+with (obj_enemy_parent) 
 {
     if (instance_exists(id))
     {

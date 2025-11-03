@@ -1,6 +1,11 @@
 // Находим ближайшую цель
-var nearest = instance_nearest(x, y, obj_enemy_parent);
 
+if (instance_exists(global.cur_target)) {
+	var nearest = global.cur_target
+}
+else {
+	var nearest = instance_nearest(x, y, obj_enemy_parent);
+}
 if (instance_exists(nearest)) {
     // Вычисляем идеальную позицию на границе радиуса
     var target_angle = point_direction(center_x, center_y, nearest.x, nearest.y);

@@ -1,9 +1,9 @@
 var cur_room_speed = room_speed
-if pause = true {
-	room_speed = 0	
+if global.pause = true {
+	global.enemy_speed_mult = 0
 }
-if pause = false {
-	room_speed = cur_room_speed	
+if global.pause = false {
+	global.enemy_speed_mult = 1
 }
 if (global.cur_tower_hp <= 0) {
 	pause = true; // Останавливаем игровые процессы
@@ -34,6 +34,9 @@ if global.cur_tower_hp < global.max_tower_hp {
 
 //левел апы
 if global.xp >= global.xp_to_up {
+	with (obj_perk_popup) {
+		show_perk_popup();
+	}
 	global.current_level += 1
 	global.xp_to_up += global.xp_to_up * 2
 	global.xp = 0
@@ -49,5 +52,4 @@ if global.xp >= global.xp_to_up {
 	global.tower_armor += 1;
 	global.tower_armor_percent += 0.01;
 	global.tower_thorns_damage += 0.01;
-	
 }

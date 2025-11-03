@@ -9,4 +9,4 @@ radius = 16;
 speed = 0;
 
 // Цель для преследования
-target = noone;
+global.cur_target = noone;

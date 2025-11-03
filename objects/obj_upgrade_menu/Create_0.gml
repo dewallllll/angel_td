@@ -48,7 +48,8 @@ menu[MENU_DEFENSE][0] = { name: "ХП", sprite: Sprite5, currentLevel: 1, maxLev
 menu[MENU_DEFENSE][1] = { name: "Реген", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 10, desc: "Увеличение регенерации" };
 menu[MENU_DEFENSE][2] = { name: "Броня", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 20, desc: "Плоское снижение урона" };
 menu[MENU_DEFENSE][3] = { name: "Процент брони", sprite: Sprite5, currentLevel: 1, maxLevel: 99, cost: 15, desc: "Процент снижения урона" };
-menu[MENU_DEFENSE][4] = "Назад";
+menu[MENU_DEFENSE][4] = { name: "Вампиризм", sprite: Sprite5, currentLevel: 1, maxLevel: 100, cost: 15, desc: "Процент восстановления от урона" };
+menu[MENU_DEFENSE][5] = "Назад";
 
 // Меню раздела "Экономика"  
 menu[MENU_ECONOMY] = [];

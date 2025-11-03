@@ -12,3 +12,6 @@ if (!variable_instance_exists(id, "cur_bounce_count")) {
 if (!variable_instance_exists(id, "bounce_chance")) {
     bounce_chance = global.bounce_shot_chance;
 }
+if lifetime<=0 {
+	instance_destroy()
+}

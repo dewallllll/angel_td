@@ -10,6 +10,7 @@ if (enemy_clear_damage - (enemy_clear_damage * global.tower_armor_percent) > 0) 
 else {
 	global.enemy_shoot_dmg  = 0
 }
+enemy_dmg = global.enemy_shoot_dmg
 can_attack = false
 attack_cooldown = 0
 alarm[0] = room_speed * 2; 

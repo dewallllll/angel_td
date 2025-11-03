@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"src_apply_perk_effect",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"src_apply_perk_effect",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
