@@ -1,0 +1,1 @@
+draw_text(670,39,string(global.time));
