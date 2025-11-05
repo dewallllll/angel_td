@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"src_apply_random_attribute_boost",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"src_apply_random_attribute_boost",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

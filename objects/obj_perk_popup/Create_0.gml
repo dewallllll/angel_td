@@ -16,13 +16,10 @@ show_perk_popup = function() {
     visible = true;
     is_active = true;
     
-    // Тестовые данные если скрипт не работает
-    if (!variable_global_exists("player_level")) {
-        global.player_level = 1;
-    }
+    
     
     // Получаем перки
-    perks = script_pick_random_perks(global.player_level);
+    perks = script_pick_random_perks(global.current_level);
     
     // Если скрипт вернул пустой массив, создаем тестовые данные
     if (array_length(perks) == 0) {

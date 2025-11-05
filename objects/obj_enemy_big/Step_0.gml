@@ -1,3 +1,4 @@
+speed = move_speed * global.enemy_speed_mult
 if (instance_exists(obj_tower)) { // Всегда проверяйте, существует ли цель
     var target_x = obj_tower.x;
     var target_y = obj_tower.y;
@@ -15,4 +16,12 @@ if (hp<=0) {
 	instance_destroy()
 	global.gold += 1 * (global.difficult_manager + global.gold_mod)
 	global.xp += 1 * (global.difficult_manager + global.xp_mod)
+}
+
+if global.pause == true {
+	speed = 0
+}
+
+if global.pause == false {
+	speed = move_speed * global.enemy_speed_mult
 }

@@ -122,13 +122,14 @@ function generate_enemy_weights() {
 // Основной код спавна врагов
 if global.pause == false && instance_exists(obj_tower) {
 	
-	global.difficulty_round *= 1.1; //Коэф сложности
-	global.budget_round *= 1.1; // бюджет сценариста
-    global.count_enemys_round = global.difficult_level; // кол-во врагов
-
-
-
-
+	global.count_enemys_round = global.difficult_level; // кол-во врагов
+	global.difficulty_round += global.difficult_manager; //Коэф сложности
+	global.budget_round +=  global.difficult_manager; // бюджет сценариста
+	global.budget_round = round(global.budget_round)
+	
+	show_debug_message("кэф сложности: " + string(global.difficulty_round))
+	show_debug_message("бюджет: " + string(global.budget_round))
+    show_debug_message("врагов в раунде: " + string(global.count_enemys_round))
 
 	show_debug_message(global.count_enemys_round);
     // Генерация массива весов врагов
@@ -236,13 +237,13 @@ if global.pause == false && instance_exists(obj_tower) {
                 num_enemy_type = irandom(enemy_type_count - 1);
                 _enemyType = global.weight_enemy_4[num_enemy_type];
                 break;
-            case 5: // вес 5
-                enemy_type_count = array_length(global.weight_enemy_5);
+            case 6: // вес 5
+                enemy_type_count = array_length(global.weight_enemy_6);
                 num_enemy_type = irandom(enemy_type_count - 1);
-                _enemyType = global.weight_enemy_5[num_enemy_type];
+                _enemyType = global.weight_enemy_6[num_enemy_type];
                 break;
             default:
-                show_message("Неверный вес врага: " + string(current_weight));
+                _enemyType = global.weight_enemy_1[0];
                 break;
         }
         

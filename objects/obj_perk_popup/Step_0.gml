@@ -23,6 +23,7 @@ if (mouse_check_button_pressed(mb_left)) {
             show_debug_message("PERK " + string(i) + " CLICKED! - " + string(perks[i][? "name"]));
             
             // Применяем перк
+			show_debug_message("Applying perk: " + string(perks[i][? "name"]));
             apply_perk_effect(perks[i]);
             
             // Скрываем меню

@@ -1,3 +1,5 @@
+speed = move_speed * global.enemy_speed_mult
+
 if (instance_exists(obj_tower)) {
     var target_x = obj_tower.x;
     var target_y = obj_tower.y;
@@ -7,7 +9,7 @@ if (instance_exists(obj_tower)) {
     
     // Если расстояние больше 100, двигаемся к цели
     if (distance_to_target > 100) {
-        move_towards_point(target_x, target_y, move_speed);
+		move_towards_point(target_x, target_y, move_speed); // 3 - скорость движения
     } else {
         // Останавливаемся, если находимся в радиусе 100 пикселей
         speed = 0;
@@ -28,4 +30,12 @@ if (hp<=0) {
 	instance_destroy()
 	global.gold += 1 * (global.difficult_manager + global.gold_mod)
 	global.xp += 1 * (global.difficult_manager + global.xp_mod)
+}
+
+if global.pause == true {
+	speed = 0
+}
+
+if global.pause == false {
+	speed = move_speed * global.enemy_speed_mult
 }

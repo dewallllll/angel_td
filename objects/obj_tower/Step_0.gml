@@ -1,8 +1,8 @@
 var cur_room_speed = room_speed
-if global.pause = true {
+if global.pause == true {
 	global.enemy_speed_mult = 0
 }
-if global.pause = false {
+if global.pause == false {
 	global.enemy_speed_mult = 1
 }
 if (global.cur_tower_hp <= 0) {
