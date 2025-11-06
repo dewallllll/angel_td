@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function apply_perk_effect(_perk) {
     var _perk_name = _perk[? "name"];
     show_debug_message(string(_perk_name))

@@ -36,10 +36,10 @@ menu[MENU_MAIN] = [
 // Меню раздела "Урон"
 menu[MENU_DAMAGE] = [];
 menu[MENU_DAMAGE][0] = { name: "Урон", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 10, desc: "Увеличивает урон" };
-menu[MENU_DAMAGE][1] = { name: "Скорость атаки", sprite: Sprite5, currentLevel: 1, maxLevel: 42, cost: 15, desc: "Ускоряет атаку" };
+menu[MENU_DAMAGE][1] = { name: "Скорость атаки", sprite: Sprite5, currentLevel: 1, maxLevel: 41, cost: 15, desc: "Ускоряет атаку" };
 menu[MENU_DAMAGE][2] = { name: "Шанс крита", sprite: Sprite5, currentLevel: 1, maxLevel: 200, cost: 5, desc: "Увеличивает шанс крита" };
 menu[MENU_DAMAGE][3] = { name: "Урон крита", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 5, desc: "Увеличивает множитель крита" };
-menu[MENU_DAMAGE][4] = { name: "Радиус атаки", sprite: Sprite5, currentLevel: 1, maxLevel: 69, cost: 5, desc: "Увеличивает радиус атаки" };
+menu[MENU_DAMAGE][4] = { name: "Радиус атаки", sprite: spr_upgrade_radius, currentLevel: 1, maxLevel: 69, cost: 5, desc: "Увеличивает радиус атаки" };
 menu[MENU_DAMAGE][5] = "Назад";
 
 // Меню раздела "Защита"
@@ -47,7 +47,7 @@ menu[MENU_DEFENSE] = [];
 menu[MENU_DEFENSE][0] = { name: "ХП", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 10, desc: "Увеличивает здоровье" };
 menu[MENU_DEFENSE][1] = { name: "Реген", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 10, desc: "Увеличение регенерации" };
 menu[MENU_DEFENSE][2] = { name: "Броня", sprite: Sprite5, currentLevel: 1, maxLevel: 3000, cost: 20, desc: "Плоское снижение урона" };
-menu[MENU_DEFENSE][3] = { name: "Процент брони", sprite: Sprite5, currentLevel: 1, maxLevel: 99, cost: 15, desc: "Процент снижения урона" };
+menu[MENU_DEFENSE][3] = { name: "Процент брони", sprite: spr_armor_percent, currentLevel: 1, maxLevel: 99, cost: 15, desc: "Процент снижения урона" };
 menu[MENU_DEFENSE][4] = { name: "Вампиризм", sprite: Sprite5, currentLevel: 1, maxLevel: 100, cost: 15, desc: "Процент восстановления от урона" };
 menu[MENU_DEFENSE][5] = "Назад";
 
