@@ -67,12 +67,17 @@ switch (currentMenu) {
                     draw_text(_elementX + itemWidth / 2, _elementY + 120, "МАКС");
                 }
                 
-                // Спрайт фона (теперь это железная рамка - отрисовывается всегда)
+                // 1. Спрайт фона (отрисовывается всегда)
+                if (sprite_exists(spr_frame_background)) {
+                    draw_sprite_ext(spr_frame_background, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
+                }
+                
+                // 2. Железная рамка (отрисовывается всегда как базовая)
                 if (sprite_exists(spr_iron_frame)) {
                     draw_sprite_ext(spr_iron_frame, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }
                 
-                // Спрайт самой иконки
+                // 3. Спрайт самой иконки
                 if (sprite_exists(_item.sprite)) {
                     draw_sprite_ext(_item.sprite, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }
@@ -80,24 +85,25 @@ switch (currentMenu) {
                 var level_procent = _item.maxLevel / 100; // один процент уровней скилла
                 var current_level_procent = _item.currentLevel / level_procent; // текущий процент прокачки
                 
-                // спрайт рамки уровня (поверх железной)
+                // 4. Рамка уровня (поверх всего)
                 var frame_sprite = -1;
 
                 // Определяем спрайт рамки уровня
                 if (_item.currentLevel == _item.maxLevel) {
                     frame_sprite = spr_bloody_frame;
                 }
-                else if (current_level_procent < 30) {
+                else if (current_level_procent >= 25 && current_level_procent < 50) {
                     frame_sprite = spr_bronze_frame;
                 }
-                else if (current_level_procent >= 30 && current_level_procent < 65) {
+                else if (current_level_procent >= 50 && current_level_procent < 75) {
                     frame_sprite = spr_silver_frame;
                 }
-                else if (current_level_procent >= 65 && current_level_procent < 99) {
+                else if (current_level_procent >= 75 && current_level_procent < 100) {
                     frame_sprite = spr_golden_frame;
                 }
+                // Для 0-25% не устанавливаем дополнительную рамку - остается только железная
 
-                // Отрисовываем рамку уровня поверх железной, если она существует
+                // Отрисовываем рамку уровня поверх всего, если она существует
                 if (frame_sprite != -1 && sprite_exists(frame_sprite)) {
                     draw_sprite_ext(frame_sprite, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }   
@@ -152,12 +158,17 @@ switch (currentMenu) {
                     draw_text(_elementX + itemWidth / 2, _elementY + 120, "МАКС");
                 }
                 
-                // Спрайт фона (теперь это железная рамка - отрисовывается всегда)
+                // 1. Спрайт фона (отрисовывается всегда)
+                if (sprite_exists(spr_frame_background)) {
+                    draw_sprite_ext(spr_frame_background, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
+                }
+                
+                // 2. Железная рамка (отрисовывается всегда как базовая)
                 if (sprite_exists(spr_iron_frame)) {
                     draw_sprite_ext(spr_iron_frame, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }
                 
-                // Спрайт самой иконки
+                // 3. Спрайт самой иконки
                 if (sprite_exists(_item.sprite)) {
                     draw_sprite_ext(_item.sprite, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }
@@ -165,24 +176,25 @@ switch (currentMenu) {
                 var level_procent = _item.maxLevel / 100; // один процент уровней скилла
                 var current_level_procent = _item.currentLevel / level_procent; // текущий процент прокачки
                 
-                // спрайт рамки уровня (поверх железной)
+                // 4. Рамка уровня (поверх всего)
                 var frame_sprite = -1;
 
                 // Определяем спрайт рамки уровня
                 if (_item.currentLevel == _item.maxLevel) {
                     frame_sprite = spr_bloody_frame;
                 }
-                else if (current_level_procent < 30) {
+                else if (current_level_procent >= 25 && current_level_procent < 50) {
                     frame_sprite = spr_bronze_frame;
                 }
-                else if (current_level_procent >= 30 && current_level_procent < 65) {
+                else if (current_level_procent >= 50 && current_level_procent < 75) {
                     frame_sprite = spr_silver_frame;
                 }
-                else if (current_level_procent >= 65 && current_level_procent < 99) {
+                else if (current_level_procent >= 75 && current_level_procent < 100) {
                     frame_sprite = spr_golden_frame;
                 }
+                // Для 0-25% не устанавливаем дополнительную рамку - остается только железная
 
-                // Отрисовываем рамку уровня поверх железной, если она существует
+                // Отрисовываем рамку уровня поверх всего, если она существует
                 if (frame_sprite != -1 && sprite_exists(frame_sprite)) {
                     draw_sprite_ext(frame_sprite, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }   
@@ -234,12 +246,17 @@ switch (currentMenu) {
                     draw_text(_elementX + itemWidth / 2, _elementY + 120, "МАКС");
                 }
                 
-                // Спрайт фона (теперь это железная рамка - отрисовывается всегда)
+                // 1. Спрайт фона (отрисовывается всегда)
+                if (sprite_exists(spr_frame_background)) {
+                    draw_sprite_ext(spr_frame_background, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
+                }
+                
+                // 2. Железная рамка (отрисовывается всегда как базовая)
                 if (sprite_exists(spr_iron_frame)) {
                     draw_sprite_ext(spr_iron_frame, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }
                 
-                // Спрайт самой иконки
+                // 3. Спрайт самой иконки
                 if (sprite_exists(_item.sprite)) {
                     draw_sprite_ext(_item.sprite, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }
@@ -247,24 +264,25 @@ switch (currentMenu) {
                 var level_procent = _item.maxLevel / 100; // один процент уровней скилла
                 var current_level_procent = _item.currentLevel / level_procent; // текущий процент прокачки
                 
-                // спрайт рамки уровня (поверх железной)
+                // 4. Рамка уровня (поверх всего)
                 var frame_sprite = -1;
 
                 // Определяем спрайт рамки уровня
                 if (_item.currentLevel == _item.maxLevel) {
                     frame_sprite = spr_bloody_frame;
                 }
-                else if (current_level_procent < 30) {
+                else if (current_level_procent >= 25 && current_level_procent < 50) {
                     frame_sprite = spr_bronze_frame;
                 }
-                else if (current_level_procent >= 30 && current_level_procent < 65) {
+                else if (current_level_procent >= 50 && current_level_procent < 75) {
                     frame_sprite = spr_silver_frame;
                 }
-                else if (current_level_procent >= 65 && current_level_procent < 99) {
+                else if (current_level_procent >= 75 && current_level_procent < 100) {
                     frame_sprite = spr_golden_frame;
                 }
+                // Для 0-25% не устанавливаем дополнительную рамку - остается только железная
 
-                // Отрисовываем рамку уровня поверх железной, если она существует
+                // Отрисовываем рамку уровня поверх всего, если она существует
                 if (frame_sprite != -1 && sprite_exists(frame_sprite)) {
                     draw_sprite_ext(frame_sprite, 0, _elementX, _elementY, 0.8, 0.8, 0, c_white, 1);
                 }   
